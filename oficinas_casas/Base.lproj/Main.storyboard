@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bN1-MV-KJm">
-                                <rect key="frame" x="136.66666666666666" y="727" width="119.99999999999997" height="31"/>
+                                <rect key="frame" x="130.66666666666666" y="726" width="131.99999999999997" height="32"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ov6-By-LON">
-                                <rect key="frame" x="36" y="642" width="321" height="60"/>
+                                <rect key="frame" x="36" y="641" width="321" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="y8e-PH-AMA"/>
                                 </constraints>
@@ -427,7 +427,6 @@
         <!--Navigation Controller-->
         <scene sceneID="ak1-Dh-gPH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7zN-3l-vOA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x8t-ta-oJT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KdK-I4-co9">
@@ -439,6 +438,7 @@
                         <segue destination="WgQ-Pf-nCC" kind="relationship" relationship="rootViewController" id="aiJ-qw-Hkx"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7zN-3l-vOA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-109" y="123"/>
         </scene>

@@ -86,6 +86,8 @@
 		4B2CDDA32AED736600E25C98 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4BACE1722AC9B0CB003C7611 /* BuscarViewController.swift */,
+				4BAAD5F02AC99F8900DDC10C /* PerfilViewController.swift */,
 				4B60F76E2ABF93AD009681C9 /* IngresoViewController.swift */,
 				4B60F7702ABF99DA009681C9 /* HogarViewController.swift */,
 				4B60F7722ABF9CA5009681C9 /* RegistroViewController.swift */,
@@ -148,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				4BAAD5EE2AC99E3B00DDC10C /* PerfilTableViewCell.swift */,
-				4BAAD5F02AC99F8900DDC10C /* PerfilViewController.swift */,
 				4BAAD5F22AC9A03000DDC10C /* Perfil.swift */,
 			);
 			path = Perfil;
@@ -158,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				4BACE1702AC9B09B003C7611 /* Buscar.swift */,
-				4BACE1722AC9B0CB003C7611 /* BuscarViewController.swift */,
 				4BACE1742AC9B0DC003C7611 /* BuscarTableViewCell.swift */,
 			);
 			path = Buscar;

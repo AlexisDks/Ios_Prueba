@@ -16,6 +16,11 @@ class PerfilViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         perfilTableView.dataSource = self
         perfilTableView.delegate = self
+        
+        perfilList.append(Perfil(enlace: "Informacion de Perfil"))
+        perfilList.append(Perfil(enlace: "Informacion de pago"))
+        perfilList.append(Perfil(enlace: "Historial de compras"))
+        perfilList.append(Perfil(enlace: "Cerrar Sesion"))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,7 +32,7 @@ class PerfilViewController: UIViewController, UITableViewDataSource, UITableView
         
         let perfil = perfilList[indexPath.row]
         
-        // cell.lblInformacion.text = perfil.dato_Lista
+        cell.lblEnlace.text = perfil.enlace
         
         return cell
     }

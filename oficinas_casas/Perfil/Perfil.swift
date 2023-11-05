@@ -8,5 +8,5 @@
 import Foundation
 
 struct Perfil {
-    let dato_Lista: String
+    let enlace: String
 }
