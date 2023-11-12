@@ -17,4 +17,19 @@ extension UIViewController {
         alert.addAction(btnCancelar)
         self.present(alert, animated: true)
     }
+    
+    func goToRec() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Contraseña", bundle: nil)
+        let ingresoScreen = storyBoard.instantiateViewController(withIdentifier: "RecuperarViewController") as! RecuperarViewController
+        
+        self.navigationController?.pushViewController(ingresoScreen, animated: true)
+    }
+    
+    func goToIndex() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let ingresoScreen = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let navigation = UINavigationController(rootViewController: ingresoScreen)
+        navigation.modalPresentationStyle = .fullScreen
+        self.present(navigation, animated: true)
+    }
 }

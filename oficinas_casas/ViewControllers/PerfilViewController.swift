@@ -36,4 +36,29 @@ class PerfilViewController: UIViewController, UITableViewDataSource, UITableView
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+            case 0:
+                let alert = UIAlertController(title: "Primera celda", message: "Se seleccionó la primera celda.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                break
+            case 1:
+                // Acción para la segunda celda
+                break
+            case 2:
+                // Acción para la tercera celda
+                break
+            case 3:
+                let domain = Bundle.main.bundleIdentifier!
+                UserDefaults.standard.removePersistentDomain(forName: domain)
+                UserDefaults.standard.synchronize()
+                self.goToIndex()
+                break
+            default:
+                // Acción para las demás celdas
+                break
+            }
+    }
 }

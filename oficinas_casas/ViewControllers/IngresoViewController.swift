@@ -6,17 +6,14 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class IngresoViewController: UIViewController {
-    
-    
     @IBOutlet weak var txtCorreo: UITextField!
     @IBOutlet weak var txtContrasena: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func btnIniciar(_ sender: Any) {
@@ -25,7 +22,7 @@ class IngresoViewController: UIViewController {
         
         if let emailAt = email, let passAt = pass {
             if !emailAt.isEmpty, !passAt.isEmpty {
-                goToMain()
+                self.ingresoFirebase(email: emailAt, password: passAt)
             } else {
                 showAlert()
             }
@@ -33,15 +30,27 @@ class IngresoViewController: UIViewController {
             // Error
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func btnRecuperarClave(_ sender: Any) {
+        goToRec()
     }
-    */
+}
 
+extension IngresoViewController {
+    func ingresoFirebase(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if let user = result {
+                let uid = user.user.uid
+                self.ingresoExistente()
+                self.goToMain()
+            } else {
+                self.showAlert()
+            }
+        }
+    }
+    
+    func ingresoExistente() {
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "login_status")
+    }
 }
