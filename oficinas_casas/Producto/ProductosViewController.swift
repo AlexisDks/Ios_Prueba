@@ -1,49 +1,47 @@
 //
-//  PrincipalViewController.swift
+//  ProductosViewController.swift
 //  oficinas_casas
 //
-//  Created by Miller Espinoza on 30/09/23.
+//  Created by Miller Espinoza on 3/12/23.
 //
 
 import UIKit
 import Firebase
 import Kingfisher
 
-class PrincipalViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    @IBOutlet weak var tblPrincipal: UICollectionView!
+class ProductosViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    @IBOutlet weak var tblProductos: UICollectionView!
     
     var productList: [Producto] = []
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tblPrincipal.dataSource = self
-        tblPrincipal.delegate = self
+        tblProductos.dataSource = self
+        tblProductos.delegate = self
         self.listarProductos()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return min(5, productList.count)
+        productList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let producto = productList[indexPath.row]
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemPrincipal", for: indexPath) as! PrincipalCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemProductos", for: indexPath) as! ProductosCollectionViewCell
         
         if let url = URL(string: producto.imagen) {
-                cell.uiImg.kf.setImage(with: url)
+                cell.imgProducto.kf.setImage(with: url)
         }
         
         cell.lblNombre.text = producto.nombre
-        cell.lblPrcio.text = "$ " + String(producto.precio)
+        cell.lblPrecio.text = "$ " + String(producto.precio)
         
         return cell
     }
-    
-
 }
 
-extension PrincipalViewController {
+extension ProductosViewController {
     func listarProductos() {
         let db = Firestore.firestore()
         
@@ -64,7 +62,7 @@ extension PrincipalViewController {
                         let categoria = Producto(nombre: nombre, precio: precio, cantidad: cantidad, descripcion: descripcion, idcategoria: idcategoria, imagen: imagen)
                         self.productList.append(categoria)
                     }
-                    self.tblPrincipal.reloadData()
+                    self.tblProductos.reloadData()
                 }
             }
         })

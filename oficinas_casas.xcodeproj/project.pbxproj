@@ -31,6 +31,14 @@
 		4BACE1712AC9B09B003C7611 /* Buscar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BACE1702AC9B09B003C7611 /* Buscar.swift */; };
 		4BACE1732AC9B0CB003C7611 /* BuscarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BACE1722AC9B0CB003C7611 /* BuscarViewController.swift */; };
 		4BACE1752AC9B0DC003C7611 /* BuscarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BACE1742AC9B0DC003C7611 /* BuscarTableViewCell.swift */; };
+		4BAF8C522B1C18FF00B798D1 /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF8C512B1C18FF00B798D1 /* Categoria.swift */; };
+		4BAF8C552B1C2BA100B798D1 /* CategoriaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF8C542B1C2BA100B798D1 /* CategoriaCollectionViewCell.swift */; };
+		4BAF8C572B1C2BB800B798D1 /* CategoriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF8C562B1C2BB800B798D1 /* CategoriaViewController.swift */; };
+		4BAF8C592B1C3A9000B798D1 /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF8C582B1C3A9000B798D1 /* Producto.swift */; };
+		4BAF8C5C2B1C3CA600B798D1 /* PrincipalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF8C5B2B1C3CA600B798D1 /* PrincipalCollectionViewCell.swift */; };
+		4BAF8C5F2B1C451500B798D1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4BAF8C5E2B1C451500B798D1 /* Kingfisher */; };
+		4BAF8C622B1C4E3100B798D1 /* ProductosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF8C612B1C4E3100B798D1 /* ProductosCollectionViewCell.swift */; };
+		4BAF8C642B1C4E4500B798D1 /* ProductosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF8C632B1C4E4500B798D1 /* ProductosViewController.swift */; };
 		4BD409072ADC1ECC00B35D8A /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BD409062ADC1ECC00B35D8A /* Roboto-Medium.ttf */; };
 		4BDEB3562B0100E9008212FF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4BDEB3552B0100E9008212FF /* FirebaseAuth */; };
 		4BDEB3582B0100E9008212FF /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 4BDEB3572B0100E9008212FF /* FirebaseAuthCombine-Community */; };
@@ -69,6 +77,13 @@
 		4BACE1702AC9B09B003C7611 /* Buscar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buscar.swift; sourceTree = "<group>"; };
 		4BACE1722AC9B0CB003C7611 /* BuscarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscarViewController.swift; sourceTree = "<group>"; };
 		4BACE1742AC9B0DC003C7611 /* BuscarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscarTableViewCell.swift; sourceTree = "<group>"; };
+		4BAF8C512B1C18FF00B798D1 /* Categoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
+		4BAF8C542B1C2BA100B798D1 /* CategoriaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaCollectionViewCell.swift; sourceTree = "<group>"; };
+		4BAF8C562B1C2BB800B798D1 /* CategoriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaViewController.swift; sourceTree = "<group>"; };
+		4BAF8C582B1C3A9000B798D1 /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
+		4BAF8C5B2B1C3CA600B798D1 /* PrincipalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalCollectionViewCell.swift; sourceTree = "<group>"; };
+		4BAF8C612B1C4E3100B798D1 /* ProductosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductosCollectionViewCell.swift; sourceTree = "<group>"; };
+		4BAF8C632B1C4E4500B798D1 /* ProductosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductosViewController.swift; sourceTree = "<group>"; };
 		4BD409062ADC1ECC00B35D8A /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		4BDEB3622B010F0B008212FF /* RecuperarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuperarViewController.swift; sourceTree = "<group>"; };
 		4BDEB3642B011E4E008212FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -81,6 +96,7 @@
 			files = (
 				4BDEB35E2B0100E9008212FF /* FirebaseFirestoreSwift in Frameworks */,
 				4BDEB3562B0100E9008212FF /* FirebaseAuth in Frameworks */,
+				4BAF8C5F2B1C451500B798D1 /* Kingfisher in Frameworks */,
 				4BDEB35C2B0100E9008212FF /* FirebaseFirestoreCombine-Community in Frameworks */,
 				4BDEB3612B010168008212FF /* Alamofire in Frameworks */,
 				4BDEB3582B0100E9008212FF /* FirebaseAuthCombine-Community in Frameworks */,
@@ -132,6 +148,10 @@
 		4B5B0A162AB3A400008B955C /* oficinas_casas */ = {
 			isa = PBXGroup;
 			children = (
+				4BAF8C602B1C4D1600B798D1 /* Producto */,
+				4BAF8C5A2B1C3C8600B798D1 /* Principal */,
+				4BAF8C532B1C2B8D00B798D1 /* Categoria */,
+				4BBFA3602B1BF337004D131B /* models */,
 				4B2CDDA02AED704200E25C98 /* OficinasData.xcdatamodeld */,
 				4B2CDD9D2AED6DE400E25C98 /* Helpers */,
 				4BACE16F2AC9B077003C7611 /* Buscar */,
@@ -182,6 +202,41 @@
 			path = Buscar;
 			sourceTree = "<group>";
 		};
+		4BAF8C532B1C2B8D00B798D1 /* Categoria */ = {
+			isa = PBXGroup;
+			children = (
+				4BAF8C542B1C2BA100B798D1 /* CategoriaCollectionViewCell.swift */,
+				4BAF8C562B1C2BB800B798D1 /* CategoriaViewController.swift */,
+			);
+			path = Categoria;
+			sourceTree = "<group>";
+		};
+		4BAF8C5A2B1C3C8600B798D1 /* Principal */ = {
+			isa = PBXGroup;
+			children = (
+				4BAF8C5B2B1C3CA600B798D1 /* PrincipalCollectionViewCell.swift */,
+			);
+			path = Principal;
+			sourceTree = "<group>";
+		};
+		4BAF8C602B1C4D1600B798D1 /* Producto */ = {
+			isa = PBXGroup;
+			children = (
+				4BAF8C612B1C4E3100B798D1 /* ProductosCollectionViewCell.swift */,
+				4BAF8C632B1C4E4500B798D1 /* ProductosViewController.swift */,
+			);
+			path = Producto;
+			sourceTree = "<group>";
+		};
+		4BBFA3602B1BF337004D131B /* models */ = {
+			isa = PBXGroup;
+			children = (
+				4BAF8C512B1C18FF00B798D1 /* Categoria.swift */,
+				4BAF8C582B1C3A9000B798D1 /* Producto.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,6 +260,7 @@
 				4BDEB35B2B0100E9008212FF /* FirebaseFirestoreCombine-Community */,
 				4BDEB35D2B0100E9008212FF /* FirebaseFirestoreSwift */,
 				4BDEB3602B010168008212FF /* Alamofire */,
+				4BAF8C5E2B1C451500B798D1 /* Kingfisher */,
 			);
 			productName = oficinas_casas;
 			productReference = 4B5B0A142AB3A400008B955C /* oficinas_casas.app */;
@@ -237,6 +293,7 @@
 			packageReferences = (
 				4BDEB3542B0100E9008212FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				4BDEB35F2B010168008212FF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				4BAF8C5D2B1C451500B798D1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 4B5B0A152AB3A400008B955C /* Products */;
 			projectDirPath = "";
@@ -278,15 +335,22 @@
 				4B4C1E4D2AC92E44000FD6B3 /* PrincipalViewController.swift in Sources */,
 				4B2CDDA22AED704200E25C98 /* OficinasData.xcdatamodeld in Sources */,
 				4B60F7712ABF99DA009681C9 /* HogarViewController.swift in Sources */,
+				4BAF8C522B1C18FF00B798D1 /* Categoria.swift in Sources */,
+				4BAF8C5C2B1C3CA600B798D1 /* PrincipalCollectionViewCell.swift in Sources */,
 				4BACE1712AC9B09B003C7611 /* Buscar.swift in Sources */,
+				4BAF8C622B1C4E3100B798D1 /* ProductosCollectionViewCell.swift in Sources */,
 				4B60F7732ABF9CA5009681C9 /* RegistroViewController.swift in Sources */,
 				4BAAD5F32AC9A03000DDC10C /* Perfil.swift in Sources */,
+				4BAF8C552B1C2BA100B798D1 /* CategoriaCollectionViewCell.swift in Sources */,
 				4BACE1732AC9B0CB003C7611 /* BuscarViewController.swift in Sources */,
+				4BAF8C642B1C4E4500B798D1 /* ProductosViewController.swift in Sources */,
 				4BAAD5F12AC99F8900DDC10C /* PerfilViewController.swift in Sources */,
 				4B60F76F2ABF93AD009681C9 /* IngresoViewController.swift in Sources */,
+				4BAF8C572B1C2BB800B798D1 /* CategoriaViewController.swift in Sources */,
 				4B5B0A1C2AB3A400008B955C /* ViewController.swift in Sources */,
 				4B5B0A182AB3A400008B955C /* AppDelegate.swift in Sources */,
 				4BAAD5EF2AC99E3B00DDC10C /* PerfilTableViewCell.swift in Sources */,
+				4BAF8C592B1C3A9000B798D1 /* Producto.swift in Sources */,
 				4B5B0A1A2AB3A400008B955C /* SceneDelegate.swift in Sources */,
 				4BACE1752AC9B0DC003C7611 /* BuscarTableViewCell.swift in Sources */,
 			);
@@ -510,6 +574,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4BAF8C5D2B1C451500B798D1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		4BDEB3542B0100E9008212FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -529,6 +601,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4BAF8C5E2B1C451500B798D1 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BAF8C5D2B1C451500B798D1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		4BDEB3552B0100E9008212FF /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4BDEB3542B0100E9008212FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

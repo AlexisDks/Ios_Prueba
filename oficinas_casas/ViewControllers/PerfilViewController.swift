@@ -9,6 +9,7 @@ import UIKit
 
 class PerfilViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var perfilTableView: UITableView!
+    @IBOutlet weak var lblNombre: UILabel!
     
     var perfilList: [Perfil] = []
     
@@ -16,6 +17,13 @@ class PerfilViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         perfilTableView.dataSource = self
         perfilTableView.delegate = self
+        
+        if let nombre = UserDefaults.standard.string(forKey: "login_nombre"),
+           let apellidos = UserDefaults.standard.string(forKey: "login_apellidos") {
+            lblNombre.text = nombre + " " + apellidos
+        } else {
+            lblNombre.text = "Usuario Generico"
+        }
         
         perfilList.append(Perfil(enlace: "Informacion de Perfil"))
         perfilList.append(Perfil(enlace: "Informacion de pago"))
@@ -45,10 +53,6 @@ class PerfilViewController: UIViewController, UITableViewDataSource, UITableView
                 self.present(alert, animated: true, completion: nil)
                 break
             case 1:
-                // Acción para la segunda celda
-                break
-            case 2:
-                // Acción para la tercera celda
                 break
             case 3:
                 let domain = Bundle.main.bundleIdentifier!
@@ -57,7 +61,6 @@ class PerfilViewController: UIViewController, UITableViewDataSource, UITableView
                 self.goToIndex()
                 break
             default:
-                // Acción para las demás celdas
                 break
             }
     }

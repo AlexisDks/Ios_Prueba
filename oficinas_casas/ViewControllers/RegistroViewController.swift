@@ -43,7 +43,9 @@ extension RegistroViewController {
         let db = Firestore.firestore()
         db.collection("usuarios").document(uid).setData([
             "nombre": name,
-            "correo": email
+            "correo": email,
+            "apellidos": "",
+            "telefono": 0
         ]) { error in
             if let err = error {
                 print("Se presento error con usuarios")

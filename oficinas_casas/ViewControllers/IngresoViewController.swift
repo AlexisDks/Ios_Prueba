@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FirebaseAuth
+import Firebase
 
 class IngresoViewController: UIViewController {
     @IBOutlet weak var txtCorreo: UITextField!
@@ -41,16 +41,33 @@ extension IngresoViewController {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if let user = result {
                 let uid = user.user.uid
-                self.ingresoExistente()
-                self.goToMain()
+                self.obtenerInformacionCuenta(uid: uid)
             } else {
                 self.showAlert()
             }
         }
     }
     
-    func ingresoExistente() {
+    func ingresoExistente(nombre: String, apellidos: String) {
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "login_status")
+        defaults.set(nombre, forKey: "login_nombre")
+        defaults.set(apellidos, forKey: "login_apellidos")
+        
+    }
+    
+    func obtenerInformacionCuenta(uid: String) {
+        let db = Firestore.firestore()
+        let docRef = db.collection("usuarios").document(uid)
+        docRef.getDocument(completion: { (document, error) in
+            if let document = document, document.exists {
+                let data = document.data()
+                let nombre = data?["nombre"] as? String ?? ""
+                let apellidos = data?["apellidos"] as? String ?? ""
+                
+                self.ingresoExistente(nombre: nombre, apellidos: apellidos)
+                self.goToMain()
+            }
+        })
     }
 }
